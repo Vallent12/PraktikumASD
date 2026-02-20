@@ -19,7 +19,11 @@ public class Mahasiswa03 {
         }
 
         void updateIpk (double ipkBaru) {
-            ipk = ipkBaru;
+            if (ipkBaru >= 0.0 && ipkBaru <= 4.0) {
+                ipk = ipkBaru;
+            } else {
+                System.out.println("IPK tidak valid! Harus antara 0.0 sampai 4.0");
+            }
         }
         
         String nilaiKinerja () {
@@ -33,4 +37,17 @@ public class Mahasiswa03 {
                 return "Kinerja kurang";
             }
         }
-}
+
+        public static void main(String[] args) {
+        Mahasiswa03 mhs = new Mahasiswa03();
+
+        mhs.nama = "Adit";
+        mhs.nim = "254107020221";
+        mhs.kelas = "TI 1D";
+
+        mhs.updateIpk(3.7);
+
+        mhs.tampilkanInformasi();
+        System.out.println("Nilai Kinerja: " + mhs.nilaiKinerja());
+        }
+    }
