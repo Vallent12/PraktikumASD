@@ -17,6 +17,9 @@ public class MahasiswaMain03 {
         mhs2.updateIpk(3.30);
         mhs2.tampilkanInformasi();
 
+        Mahasiswa03 mhsAdit = new Mahasiswa03 ("Aditya Fabryand Vallentino", "254107020221", 3.70, "TI 1D" );
+        mhsAdit.tampilkanInformasi();
+
     }
     
 }
